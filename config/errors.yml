@@ -1,0 +1,12 @@
+1:
+  status:          400
+  message:         Invalid URL
+  description:     The URL provided is invalid.
+2:
+  status:          400
+  message:         Corrupt CSV Table
+  description:     The data provided has resulted in a corrupt CSV that can't be read
+3:
+  status:          400
+  message:         Invalid CSV
+  description:     The CSV provided is invalid.
