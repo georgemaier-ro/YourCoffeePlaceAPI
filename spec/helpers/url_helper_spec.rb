@@ -10,7 +10,7 @@ RSpec.describe UrlHelper, type: :helper do
       expect(url_page.present?).to be true
     end
 
-    it 'raise and error if url is invalid' do
+    it 'raise an error if url is invalid' do
       expect(url_page = read_remote_url(invalid_url)).to eq(api_error(1))
     end
   end
