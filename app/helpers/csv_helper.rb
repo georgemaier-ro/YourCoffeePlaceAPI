@@ -13,4 +13,8 @@ module CsvHelper
       csv_table
     end
   end
+
+  def create_array_from_csv_table(csv_table)
+    array_from_csv = csv_table.read
+  end
 end
