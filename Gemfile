@@ -21,6 +21,12 @@ gem "open-uri", "0.5.0"
 # Pseudo `IO` class from/to `String`.
 gem "stringio", "3.1.5"
 
+# An implementation of Matrix and Vector classes.
+gem "matrix", "0.4.2"
+
+# This library provides arbitrary-precision decimal floating-point number class.
+gem "bigdecimal", "1.2.7"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem 'bcrypt', '~> 3.1.7'
 
