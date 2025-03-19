@@ -3,6 +3,18 @@ require 'rails_helper'
 RSpec.describe CoffeeShop, type: :model do
   let!(:coffee_shop) { CoffeeShop.new("Starbucks Sydney", "-33.871843", "151.206767") }
 
+  context 'when user lat and lng values are valid' do
+    it 'creates a CoffeeShop' do
+      expect(CoffeeShop.new("Starbucks Sydney", "-33.871843", "151.206767").valid?).to eq(true)
+    end
+  end
+
+  context 'when user lat and lng values are invalid' do
+    it 'does not create a CoffeeShop' do
+      expect(CoffeeShop.new("Starbucks Sydney", "-33.871%43", "151.206767").valid?).to eq(false)
+    end
+  end
+
   context 'when user lat and lng values are strings' do
     it 'correctly calculates distance.' do
       user_latitude = "-22.923489"
