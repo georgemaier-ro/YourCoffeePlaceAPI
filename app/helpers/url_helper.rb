@@ -7,7 +7,7 @@ module UrlHelper
     begin
       url_page = URI.open(url)
     rescue StandardError
-      api_error 1
+      raise ErrorsService.new("The URL provided is invalid.")
     else
       url_page
     end
