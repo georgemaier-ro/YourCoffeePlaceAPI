@@ -65,4 +65,5 @@ group :development, :test do
   gem "rspec", "3.13.0"
   gem "rspec-rails", "7.1.1"
   gem "pry-byebug", "3.10.1"
+  gem "simplecov", "0.22.0"
 end
