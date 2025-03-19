@@ -10,3 +10,7 @@
   status:          400
   message:         Invalid CSV
   description:     The CSV provided is invalid.
+4:
+  status:          400
+  message:         Invalid latidude and longitude for client location
+  description:     The latidude and longitude provided for the client location were not valid coordinates.
