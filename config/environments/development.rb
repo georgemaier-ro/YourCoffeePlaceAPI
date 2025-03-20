@@ -3,6 +3,9 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # ENV variable for coffee shops url
+  ENV["COFFEE_SHOP_URL"] = "https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv"
+
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
 
