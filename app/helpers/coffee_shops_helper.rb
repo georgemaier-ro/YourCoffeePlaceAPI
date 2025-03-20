@@ -13,7 +13,7 @@ module CoffeeShopsHelper
         coffee_shops << create_coffee_shop_with_distance(coffee_shop, user_location.latitude, user_location.longitude)
       end
 
-      sorted_coffee_shops = coffee_shops.sort_by(&:distance)
+      sorted_coffee_shops = coffee_shops.sort_by { |coffee_shop| coffee_shop.distance.to_f }
       list_only_required_info(sorted_coffee_shops)
     else
       api_error 4
