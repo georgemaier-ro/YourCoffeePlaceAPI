@@ -1,3 +1,4 @@
+# Here we handle sorting and returning the right data
 module CoffeeShopsHelper
   include CsvHelper
   include ErrorsHelper

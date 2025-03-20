@@ -1,3 +1,4 @@
+# Used for validating coordinates and calculating distance
 module CoordinatesHelper
   # Checks if its a valid coordinate/float
   def check_if_valid_float(coordinate)
