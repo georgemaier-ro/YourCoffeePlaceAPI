@@ -10,7 +10,12 @@ RSpec.describe "CoffeeShops", type: :request do
     context 'with valid lat and long' do
       it 'returns the sorted top 3 coffee shops' do
         get '/coffee_shops/:get_coffee', params: { latitude: latitude_second, longitude: longitude_second }
-        expect(JSON.parse(response.body)).to eq([["Starbucks Seattle2", "0.0645", "47.5869", "-122.3368"], ["Starbucks Seattle", "0.0861", "47.5809", "-122.3160"], ["Starbucks SF", "10.0793", "37.5209", "-122.3340"]])
+        expect(JSON.parse(response.body)).to eq([ [ "Starbucks Seattle2", "0.0645", "47.5869", "-122.3368" ], [ "Starbucks Seattle", "0.0861", "47.5809", "-122.3160" ], [ "Starbucks SF", "10.0793", "37.5209", "-122.3340" ] ])
+      end
+
+      it 'returns sorted top 3 coffee shops for other values' do
+        get '/coffee_shops/:get_coffee', params: { latitude: latitude, longitude: longitude }
+        expect(JSON.parse(response.body)).to eq([ [ "Starbucks SF", "22.3048", "37.5209", "-122.3340" ], [ "Starbucks Seattle", "25.7264", "47.5809", "-122.3160" ], [ "Starbucks Seattle2", "25.7474", "47.5869", "-122.3368" ] ])
       end
     end
   end
